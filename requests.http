@@ -11,3 +11,11 @@ content-type: application/json
 {
     "content": "hi there"
 }
+
+### Create ERROR
+POST  http://localhost:3000/messages
+content-type: application/json
+
+{
+    "content": null
+}
