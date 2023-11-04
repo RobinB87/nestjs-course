@@ -4,6 +4,9 @@ GET http://localhost:3000/messages
 ### Get one
 GET http://localhost:3000/messages/699
 
+### Get one ERROR
+GET http://localhost:3000/messages/124124
+
 ### Create (empty line after content type is necessary!)
 POST  http://localhost:3000/messages
 content-type: application/json
