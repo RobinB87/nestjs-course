@@ -2,7 +2,7 @@
 GET http://localhost:3000/messages
 
 ### Get one
-GET http://localhost:3000/messages/5
+GET http://localhost:3000/messages/699
 
 ### Create (empty line after content type is necessary!)
 POST  http://localhost:3000/messages

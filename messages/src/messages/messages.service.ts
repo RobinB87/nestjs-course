@@ -1,7 +1,7 @@
 import { MessagesRepository } from './messages.repository';
 
 export class MessagesService {
-  messagesRepo: MessagesRepository;
+  private messagesRepo: MessagesRepository;
 
   constructor() {
     // In real apps we use DI
