@@ -12,8 +12,8 @@ POST  http://localhost:3000/messages
 content-type: application/json
 
 {
-    "content": "hi there"
-}
+    "content": "hi there after DI"
+} 
 
 ### Create ERROR
 POST  http://localhost:3000/messages
