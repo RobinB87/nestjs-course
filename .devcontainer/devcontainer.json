@@ -7,7 +7,7 @@
 
   "customizations": {
     "vscode": {
-      "extensions": ["ashinzekene.nestjs", "esbenp.prettier-vscode"],
+      "extensions": ["ashinzekene.nestjs", "esbenp.prettier-vscode", "humao.rest-client"],
       "settings": {
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "esbenp.prettier-vscode",
