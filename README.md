@@ -10,3 +10,4 @@ nest g controller messages/messages --flat
 # npm
 
 1. class-validator class-transformer
+2. npm i @nestjs/typeorm typeorm sqlite3
