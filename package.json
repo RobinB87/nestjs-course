@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "@nestjs/typeorm": "^10.0.0",
-    "sqlite3": "^5.1.6",
-    "typeorm": "^0.3.17"
-  }
-}
