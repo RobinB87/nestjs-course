@@ -3,6 +3,8 @@ FROM node:18
 # Install basic development tools
 RUN apt update && apt install -y less man-db sudo
 
+RUN sudo apt install sqlite3
+
 RUN sudo npm install -g @nestjs/cli
 
 # Ensure default `node` user has access to `sudo`
