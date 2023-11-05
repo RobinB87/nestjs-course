@@ -10,5 +10,4 @@ nest g controller messages/messages --flat
 # npm
 
 1. npm i class-validator class-transformer
-2. npm i @nestjs/typeorm typeorm sqlite3
-   npm i --save @nestjs/typeorm typeorm mysql3
+2. npm i --save @nestjs/typeorm typeorm mysql3
