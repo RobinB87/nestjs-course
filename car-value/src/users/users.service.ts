@@ -17,6 +17,7 @@ export class UsersService {
 
   async findOne(id: number) {
     const user = await this.repo.findOneBy({ id });
+    // NotFoundException do not use this when using different communication protocols like gRPC or WebSockets
     if (!user) throw new NotFoundException('User not found');
     return user;
   }
