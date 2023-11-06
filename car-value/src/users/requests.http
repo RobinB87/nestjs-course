@@ -24,3 +24,22 @@ GET http://localhost:3000/auth?email=asdf@adf.com
 
 ### Find all users by email - NONE FOUND
 GET http://localhost:3000/auth?email=asdf@adf.comadsf
+
+### Delete one user by id
+DELETE http://localhost:3000/auth/2
+
+### Update a users email
+PATCH http://localhost:3000/auth/1
+Content-Type: application/json
+
+{
+    "email": "badsgfsdfg@adf.com"
+}
+
+### Update a users password
+PATCH http://localhost:3000/auth/1
+Content-Type: application/json
+
+{
+    "password": "123123123"
+}
