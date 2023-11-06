@@ -1,0 +1,17 @@
+### Create new user
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "email": "asdf@adf.com",
+    "password": "awdfasdfsafd"
+}
+
+### Create new user ERROR
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "email": "asdf@adf.",
+    "password": "awdfasdfsafd"
+}

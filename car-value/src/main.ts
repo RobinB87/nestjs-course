@@ -6,7 +6,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(
     new ValidationPipe({
-      whitelist: true, //
+      whitelist: true, // strip 'additiona' properties which are not in dto, so users cannot add additional properties
     }),
   );
   await app.listen(3000);
