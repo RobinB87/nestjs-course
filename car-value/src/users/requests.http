@@ -3,8 +3,8 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-    "email": "asdf@adf.com",
-    "password": "awdfasdfsafd"
+    "email": "bla@blaat.com",
+    "password": "1234567890"
 }
 
 ### Create new user ERROR
