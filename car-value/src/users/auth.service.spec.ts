@@ -8,6 +8,7 @@ describe('AuthService', () => {
 
   beforeEach(async () => {
     const fakeUsersService: Partial<UsersService> = {
+      // you want an empty array, otherwise user exists
       find: () => Promise.resolve([]),
       create: (email: string, password: string) =>
         Promise.resolve({ id: 1, email, password } as User),
@@ -25,5 +26,13 @@ describe('AuthService', () => {
 
   it('can create an instance of auth service', async () => {
     expect(service).toBeDefined();
+  });
+
+  it('creates a new user with a salted and hashed password', async () => {
+    const user = await service.signup('bla@bla.com', '1234');
+    expect(user.password).not.toEqual('1234');
+    const [salt, hash] = user.password.split('.');
+    expect(salt).toBeDefined();
+    expect(hash).toBeDefined();
   });
 });
