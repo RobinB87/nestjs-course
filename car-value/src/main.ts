@@ -13,7 +13,7 @@ async function bootstrap() {
   );
   app.useGlobalPipes(
     new ValidationPipe({
-      whitelist: true, // strip 'additiona' properties which are not in dto, so users cannot add additional properties
+      whitelist: true, // strip additional properties which are not in dto, so users cannot add additional properties
     }),
   );
   await app.listen(3000);
