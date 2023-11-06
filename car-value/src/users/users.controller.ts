@@ -14,6 +14,7 @@ import { UpdateUserDto } from './dtos/update-user.dto';
 import { UserDto } from './dtos/user.dto';
 import { UsersService } from './users.service';
 
+@Serialize(UserDto)
 @Controller('auth')
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
@@ -23,7 +24,6 @@ export class UsersController {
     this.usersService.create(body.email, body.password);
   }
 
-  @Serialize(UserDto)
   @Get('/:id')
   getOne(@Param('id') id: string) {
     return this.usersService.findOne(+id);
