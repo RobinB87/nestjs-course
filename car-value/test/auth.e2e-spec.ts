@@ -1,5 +1,5 @@
-import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
+import { Test, TestingModule } from '@nestjs/testing';
 import * as request from 'supertest';
 import { AppModule } from './../src/app.module';
 
@@ -16,7 +16,7 @@ describe('Authentication System (e2e)', () => {
   });
 
   it('handles a signup request', () => {
-    const email = 'testUnique@test.com';
+    const email = 'testxzxUnique@test.com';
     return request(app.getHttpServer())
       .post('/auth/signup')
       .send({
