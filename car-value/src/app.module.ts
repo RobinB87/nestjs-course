@@ -1,4 +1,5 @@
-import { Module } from '@nestjs/common';
+import { Module, ValidationPipe } from '@nestjs/common';
+import { APP_PIPE } from '@nestjs/core';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Report } from './reports/report.entity';
 import { ReportsModule } from './reports/reports.module';
@@ -15,6 +16,14 @@ import { UsersModule } from './users/users.module';
     }),
     UsersModule,
     ReportsModule,
+  ],
+  providers: [
+    {
+      provide: APP_PIPE, // setup global pipe
+      useValue: new ValidationPipe({
+        whitelist: true, // strip additional properties which are not in dto, so users cannot add additional properties
+      }),
+    },
   ],
 })
 export class AppModule {}
