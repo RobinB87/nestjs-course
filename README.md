@@ -13,3 +13,4 @@ nest g controller messages/messages --flat
 2. npm i --save @nestjs/typeorm typeorm mysql3
 3. npm i class-validator class-transformer
 4. npm i cookie-session @types/cookie-session
+5. npm i @nestjs/config
