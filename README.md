@@ -14,3 +14,4 @@ nest g controller messages/messages --flat
 3. npm i class-validator class-transformer
 4. npm i cookie-session @types/cookie-session
 5. npm i @nestjs/config
+6. npm i cross-env // works across different environments
