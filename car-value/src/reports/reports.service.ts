@@ -29,7 +29,7 @@ export class ReportsService {
   createEstimate({ make, model, lng, lat, year, mileage }: GetEstimateDto) {
     return this.repo
       .createQueryBuilder()
-      .select('AVG(prive)', 'price')
+      .select('AVG(price)', 'price')
       .where('make = :make', { make })
       .andWhere('model = :model', { model })
       .andWhere('lng - :lng BETWEEN -5 and 5', { lng }) // subtract + or - 5 degrees
