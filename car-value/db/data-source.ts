@@ -2,7 +2,7 @@ import { DataSource, DataSourceOptions } from 'typeorm';
 
 const dbOptions: DataSourceOptions = {
   type: 'sqlite',
-  database: 'db.sqlite.dev',
+  database: './db/db.sqlite.dev',
   entities: ['**/*.entity.js'],
   migrations: ['dist/db/migrations/*.js'],
   synchronize: false,
@@ -14,7 +14,7 @@ switch (process.env.NODE_ENV) {
   case 'test':
     Object.assign(dbOptions, {
       type: 'sqlite',
-      database: 'db.sqlite.test',
+      database: './db/db.sqlite.test',
       entities: ['**/*.entity.ts'],
       migrationsRun: true,
     });
