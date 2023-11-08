@@ -24,5 +24,13 @@ UPDATE report SET userId = 1
 https://typeorm.io/using-cli
 https://typeorm.io/migrations
 
-npm run typeorm migration:create ./migrations/initial-create
-npm run typeorm migration:run
+1. Create data source and import it
+2. Refer to it in package json: "typeorm": ".."
+3. Generate migration:
+   npm run typeorm migration:generate db/migrations/migration-name
+
+4. Run migration:
+   npm run typeorm migration:run
+
+5. Revert migration (if necessary)
+   npm run typeorm:dev -- migration:revert
