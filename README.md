@@ -40,3 +40,10 @@ https://typeorm.io/migrations
 1. npm install pg (postgress)
 2. set up heroku
    https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up
+
+# Heroku commands:
+
+1. heroku create (create new heroku project)
+2. heroku addons:create heroku-postgresql:hobby-dev (free hobby tier)
+3. heroku config:set COOKY_KEY=asdflkasdjfasldkj (use some key)
+4. git push heroku master (main?)
