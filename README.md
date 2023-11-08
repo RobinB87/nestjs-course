@@ -18,3 +18,11 @@ nest g controller messages/messages --flat
 
 after creating one to many relationship, update reports table:
 UPDATE report SET userId = 1
+
+# TypeORM migrations
+
+https://typeorm.io/using-cli
+https://typeorm.io/migrations
+
+npm run typeorm migration:create ./migrations/initial-create
+npm run typeorm migration:run
