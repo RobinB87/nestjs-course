@@ -1,0 +1,13 @@
+### Create ERROR
+POST http://localhost:3000/reports
+Content-Type: application/json
+
+{
+    "lat": 0,
+    "lng": 0,
+    "make": "toyota",
+    "mileage": 100000,
+    "model": "corola",
+    "price": 25000,
+    "year": 1980
+}
