@@ -34,3 +34,9 @@ https://typeorm.io/migrations
 
 5. Revert migration (if necessary)
    npm run typeorm:dev -- migration:revert
+
+# Production
+
+1. npm install pg (postgress)
+2. set up heroku
+   https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up
