@@ -2,10 +2,10 @@ import { MiddlewareConsumer, Module, ValidationPipe } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { APP_PIPE } from '@nestjs/core';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { dataSourceOptions } from '../db/data-source';
 import { ReportsModule } from './reports/reports.module';
 import { UsersModule } from './users/users.module';
 
-const dbConfig = require('../ormconfig.js');
 const cookieSession = require('cookie-session');
 
 @Module({
@@ -14,7 +14,7 @@ const cookieSession = require('cookie-session');
       isGlobal: true, // no need to import this setting in every module
       envFilePath: `.env.${process.env.NODE_ENV}`,
     }),
-    TypeOrmModule.forRoot(dbConfig),
+    TypeOrmModule.forRoot(dataSourceOptions),
     UsersModule,
     ReportsModule,
   ],
