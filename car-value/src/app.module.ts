@@ -39,11 +39,13 @@ const cookieSession = require('cookie-session');
   ],
 })
 export class AppModule {
+  constructor(private readonly configService: ConfigService) {}
+
   configure(consumer: MiddlewareConsumer) {
     consumer
       .apply(
         cookieSession({
-          keys: ['adsfasdf'],
+          keys: [this.configService.get('COOKIE_KEY')],
         }),
       )
       .forRoutes('*'); // use this middleware in every request that flows in the entire application
