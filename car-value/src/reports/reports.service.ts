@@ -35,6 +35,7 @@ export class ReportsService {
       .andWhere('lng - :lng BETWEEN -5 and 5', { lng }) // subtract + or - 5 degrees
       .andWhere('lat - :lat BETWEEN -5 and 5', { lat })
       .andWhere('year - :year BETWEEN -3 and 3', { year })
+      .andWhere('approved IS TRUE')
       .orderBy('ABS(mileage - :mileage)', 'DESC') // absolute value, descending
       .setParameters({ mileage }) // set mileage param here, orderBy does not allow { mileage } directly
       .limit(3) // get only three reports max
