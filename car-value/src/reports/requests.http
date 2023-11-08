@@ -1,4 +1,4 @@
-### Create ERROR
+### Create
 POST http://localhost:3000/reports
 Content-Type: application/json
 
@@ -11,3 +11,12 @@ Content-Type: application/json
     "price": 25000,
     "year": 1980
 }
+
+### Approve
+PATCH http://localhost:3000/reports/3
+Content-Type: application/json
+
+{
+    "approved": true
+}
+
